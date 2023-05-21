@@ -31,4 +31,3 @@ var productExceptSelf = function(nums) {
     return res;
 };
 
-console.log(productExceptSelf([1,2,3,4]))
