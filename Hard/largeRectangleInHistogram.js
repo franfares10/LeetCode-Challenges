@@ -15,8 +15,6 @@ var largestRectangleArea = function(heights) {
     let stack = [];
     let maxArea = 0;
     for(let i = 0; i<heights.length; i++){
-        console.log(stack)
-        //console.log(maxArea)
         if(stack.length == 0){
             stack.push([i,heights[i]]);
         }
@@ -41,13 +39,11 @@ var largestRectangleArea = function(heights) {
     if(stack.length != 0){
         for( let j = 0; j<stack.length; j++){
             let partialArea = (heights.length - stack[j][0]) * stack[j][1];
-            console.log('PARTIAL AREA:',partialArea)
             if(partialArea > maxArea){
                 maxArea = partialArea;
             }
         }
     }
-    console.log(stack)
     return maxArea;
 };
 
